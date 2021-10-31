@@ -66,7 +66,41 @@ $superheroes = [
 ?>
 
 <ul>
-<?php foreach ($superheroes as $superhero): ?>
+<?php 
+
+$val = strip_tags($_GET['query']);
+$name = filter_var($val, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+$check = 1;
+
+
+?>
+<h2>RESULTS</h1>
+<hr>
+<?php
+if ($name == "default") {
+    foreach ($superheroes as $superhero): ?>
   <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
+<?php endforeach; }
+
+else{
+    foreach($superheroes as $hero) {
+        if(($hero["name"]== $name) or ($hero["alias"]== $name)){
+            $check=0;?>
+            <h3><?= $hero["alias"] ?></h3>
+            <h4><?= $hero["name"] ?></h4>
+            <p><?= $hero["biography"] ?></p>
+            
+        <?php   
+        }
+    } if($check==1){
+        ?><p id="notFound">Superhero not found</p>
+    <?php
+    $check =1;
+    }
+       
+
+}?>
 </ul>
+
+
+

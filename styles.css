@@ -1,0 +1,74 @@
+body.vsc-initialized {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+}
+
+div#header {
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: #b70d00;
+}
+
+h1 {
+    text-align: center;
+    font-family: -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+    color: white;
+}
+
+form {
+    padding: 20px 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="search"] {
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 6px #00000033);
+    font-size: 18px;
+    font-family: -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+    color: slategrey;
+}
+
+input[type="search"]:focus-visible {
+    outline: 0px;
+}
+
+button#searchBTN {
+    padding: 14px 30px;
+    border: 0px;
+    filter: drop-shadow(0px 2px 3px #00000033);
+    margin-left: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+div#result {
+    font-size: 18px;
+    font-family: -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+    margin: 0px 10%;
+}
+
+div#holder {
+    width: 100%;
+    font-size: 14px;
+    font-family: -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+}
+
+#notFound{
+    color: rgb(121, 0, 0);
+}
+
+hr {
+    margin-bottom: 30px;
+}
